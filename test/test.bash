@@ -15,11 +15,6 @@ if cat /tmp/mypkg.log | grep -E 'Listen: 360,' /tmp/mypkg.log; then
 	echo "Error: 360以上はないです"
 	exit 1
 else
-	echo 'OK'
-	exit 0
-        echo "Error: 360以上はないです"
-        exit 1
-else
         echo 'OK'
         exit 0
 fi
