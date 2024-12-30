@@ -14,7 +14,7 @@ class Talker(Node):
     def cb(self):
         rad = math.radians(self.angle)
         sin = math.sin(rad)
-        ans = round(sin, 3)
+        ans = round(sin, 5)
         mes = f"{self.angle}, {ans}"
         msg =String()
         msg.data = mes
