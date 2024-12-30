@@ -1,3 +1,14 @@
+# sin値の計算結果をだす                                                                                                                                 ![test](https://github.com/rikutonozaki/robosys2024/actions/workflows/test.yml/badge.svg)
+
+## 概要
+
+度が増えていくたびにsin値の計算結果を送り続ける
+
+## ノード:talker,listener
+
+
+
+## パブリッシュされるトピック
 
 - トピック```countup```をパブリッシュするノード
 - タイマー(create_timer)を使用して、0.5秒ごとに角度を１度ずつ増加させsin値を計算してパブリッシュする。
