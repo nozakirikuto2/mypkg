@@ -1,4 +1,5 @@
 # sin値の計算結果をだす
+
 ![test](https://github.com/rikutonozaki/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ## 概要
