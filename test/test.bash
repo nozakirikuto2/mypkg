@@ -8,7 +8,9 @@ dir=~
 
 cd $dir/ros2_ws
 colcon build
-source $dir/.bashrc
+source /opt/ros/foxy/setup.bash
+source $dir/ros2_ws/install/setup.bash
+
 timeout 181 ros2 launch mypkg talk_listen.launch.py > /tmp/mypkg.log
 
 if cat /tmp/mypkg.log | grep -E 'Listen: 360,' /tmp/mypkg.log; then
