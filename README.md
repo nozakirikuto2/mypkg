@@ -1,5 +1,4 @@
 # sin値の計算結果をだす
-
 ![test](https://github.com/rikutonozaki/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ## 概要
@@ -28,13 +27,12 @@
 
 - launchに移動
 ```bash
-	cd launch
 ```
 
 ## 実行方法
 
 ```bash
-	ros2 launch mypkg talk_listen.launch.py
+        ros2 launch mypkg talk_listen.launch.py
 ```
 
 ## 必要なソフトウェア
@@ -44,6 +42,7 @@
 ## ライセンス
 
 - このソフトウェアパッケージは、３条項BSDライセンスの下、再分布および使用が許可されています。
+        - テスト済みバージョン: 3.7~3.10
 - © 2024 Rikuto Nozaki
 
 ## テスト環境
