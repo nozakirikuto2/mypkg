@@ -3,15 +3,15 @@ from rclpy.node import Node
 import math
 from std_msgs.msg import String
 
-class Talker(Node):
+class SinPublisher(Node):
     def __init__(self):
-        super().__init__("talker")
+        super().__init__("sin_publisher")
         self.pub = self.create_publisher(String, "countup", 10)
-        self.create_timer(0.5, self.cb)
+        self.create_timer(0.5, self.publish_sin)
         self.angle = 0
-        self.get_logger().set_level(rclpy.logging.LoggingSeverity.WARN)
+        self.get_logger().info("Sinpub is now running...")
 
-    def cb(self):
+    def publish_sin(self):
         rad = math.radians(self.angle)
         sin = math.sin(rad)
         ans = round(sin, 5)
@@ -24,7 +24,7 @@ class Talker(Node):
 
 def main():
     rclpy.init()
-    node = Talker()
+    node = SinPublisher()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
