@@ -9,7 +9,7 @@ class SinPublisher(Node):
         self.pub = self.create_publisher(String, "countup", 10)
         self.create_timer(0.5, self.publish_sin)
         self.angle = 0
-        self.get_logger().info("Sinpub is now running...")
+        
 
     def publish_sin(self):
         rad = math.radians(self.angle)
@@ -19,7 +19,6 @@ class SinPublisher(Node):
         msg =String()
         msg.data = mes
         self.pub.publish(msg)
-        self.get_logger().info(f"Published: {msg.data}")
         self.angle = (self.angle + 1)
 
 def main():
