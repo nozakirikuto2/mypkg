@@ -24,7 +24,7 @@
 
 - mypkgに移動
 ```bash
-	mypkg
+	cd mypkg
 ```
 
 ## 実行方法
