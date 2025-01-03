@@ -11,7 +11,7 @@ colcon build
 source /opt/ros/foxy/setup.bash
 source $dir/ros2_ws/install/setup.bash
 
-timeout 181 ros2 run mypkg sin_publisher > /tmp/mypkg.log
+timeout 15 ros2 run mypkg sin_publisher > /tmp/mypkg.log
 
 if cat /tmp/mypkg.log | grep -E 'Listen: 360,' /tmp/mypkg.log; then
 	echo "Error: 360以上はないです"

@@ -1,4 +1,4 @@
-# sin値の計算結果をだす
+# countup
 ![test](https://github.com/nozakirikuto2/robosys2024/actions/workflows/test.yml/badge.svg)
 
 ## 概要
@@ -7,11 +7,11 @@
 
 ## ノード:SinPublisher
 
-クラスがノードとして定義して```rclpy.node.Node```を継承する。ros2のパブリッシャとして```countup```トピックにメッセージをパブリッシャする。
 
-## トピック
 
-- トピック```countup```をパブリッシュする。このトピックに```SinPublisher```ノードは角度（```self.angle```）とそのsin値（```sin```）をメッセージとしてパブリッシュする。
+## トピック:countup
+
+- このトピックに```SinPublisher```ノードは角度（```self.angle```）とそのsin値（```sin```）をメッセージとしてパブリッシュする。
 - タイマー(create_timer)を使用して、0.5秒ごとに角度を１度ずつ増加させsin値を計算してパブリッシュする。
 - トピックに関連付けられたメッセージの型は```std_msgs.msg.String```です。このメッセージには角度とsin値が含まれる。
 
@@ -43,7 +43,7 @@
 
 ## ライセンス
 
-- このソフトウェアパッケージは、３条項BSDライセンスの下、再分布および使用が許可されています。
+- このソフトウェアパッケージは、3条項BSDライセンスの下、再分布および使用が許可されています。
         - テスト済みバージョン: 3.7~3.10
 - © 2024 Rikuto Nozaki
 
