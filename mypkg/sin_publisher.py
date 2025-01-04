@@ -19,7 +19,7 @@ class SinPublisher(Node):
         msg =String()
         msg.data = mes
         self.pub.publish(msg)
-        self.angle = (self.angle + 1)
+        self.angle = (self.angle + 1) % 360
 
 def main():
     rclpy.init()

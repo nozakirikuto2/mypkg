@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'sin_publisher = mypkg.sin_publisher:main',
+            'sub = mypkg.sub:main',
         ],
     },
 )

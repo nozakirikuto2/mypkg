@@ -8,15 +8,8 @@ dir=~
 
 cd $dir/ros2_ws
 colcon build
-source /opt/ros/foxy/setup.bash
-source $dir/ros2_ws/install/setup.bash
+source $dir/.bashrc
+timeout 10 ros2 launch mypkg sin_publisher_sub.launch.py > /tmp/mypkg.log
 
-timeout 15 ros2 run mypkg sin_publisher > /tmp/mypkg.log
-
-if cat /tmp/mypkg.log | grep -E 'Listen: 360,' /tmp/mypkg.log; then
-	echo "Error: 360以上はないです"
-	exit 1
-else
-        echo 'OK'
-        exit 0
-fi
+cat /tmp/mypkg.log |
+grep '17, 0.29237'
