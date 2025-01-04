@@ -1,32 +1,37 @@
-# sin_publisher Node (ros2パッケージ)
+# countup (ros2パッケージ)
 ![test](https://github.com/nozakirikuto2/robosys2024/actions/workflows/test.yml/badge.svg)
-
-## トピック:countup
-
-- このトピックに```sinpublisher```ノードは角度（```self.angle```）とそのsin値（```sin```）をメッセージとしてパブリッシュする。
-- タイマー(create_timer)を使用して、0.5秒ごとに角度を１度ずつ増加させsin値を計算してパブリッシュする。
-- トピックに関連付けられたメッセージの型は```std_msgs.msg.String```です。このメッセージには角度とsin値が含まれる。
-- sub.pyはテスト用
 
 ## 概要
 
+このプログラムはros2のパッケージとして作成されており、角度が増加するたびにsin値をだしてトピック```countup``に送信する機能を持つノード```sinpublisher```を実装しています。
+sub.pyはテスト用として用いています。
+
 ## ノード:sinpublisher
 
+- 0度~360度までの角度のsin値を計算し、0.5秒間隔でデータを送信します。
+- 角度が360に達すると0度にリセットされる。
 
+## トピック:countup
+
+- 角度とsin値をリアルタイムで送信。
+- 0.5秒ごとに新しいメッセージを送信。
 
 ## 起動する手順
 
 - gitをインストール
+
 ```bash
 	sudo apt install git
 ```
 
 - リポジトリをクローン
+
 ```bash
 	git clone https://github.com/nozakirikuto2/mypkg.git
 ```
 
 - mypkgに移動
+
 ```bash
 	cd mypkg
 ```
@@ -36,12 +41,15 @@
 ```bash
         ros2 run mypkg sin_publisher
 ```
+
 ・何も表示されないので起動させたままで別の端末を開く。
+
 ```bash
 	ros2 topic echo /countup
 ```
 
 ## 必要なソフトウェア
+
 - Python
 	- テスト済みバージョン: 3.7~3.10
 
