@@ -3,7 +3,7 @@ from rclpy.node import Node
 import math
 from std_msgs.msg import String
 
-class SinPublisher(Node):
+class Sin_publisher(Node):
     def __init__(self):
         super().__init__("sin_publisher")
         self.pub = self.create_publisher(String, "countup", 10)
@@ -23,7 +23,7 @@ class SinPublisher(Node):
 
 def main():
     rclpy.init()
-    node = SinPublisher()
+    node = Sin_publisher()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
