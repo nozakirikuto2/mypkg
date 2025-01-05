@@ -29,8 +29,6 @@
 ## ライセンス
 
 - このソフトウェアパッケージは、3条項BSDライセンスの下、再分布および使用が許可されています。
-- このパッケージのテストに利用したコンテナは下記が使用したリンクです。
-   - [ryuichiueda/ubuntu22.04-ros2:latest](https://hub.docker.com/repository/docker/ryuichiueda/ubuntu22.04-ros2)
 - © 2025 Rikuto Nozaki
 
 ## テスト環境
