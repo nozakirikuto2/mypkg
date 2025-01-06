@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Rikuto Nozaki
+# SPDX-License-Identifier: BSD-3-Clause
+
 import rclpy
 from rclpy.node import Node
 import math
